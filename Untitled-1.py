@@ -31,5 +31,6 @@ async def on_message(message):
  
         if i is False:
             await message.channel.send("{}, 당신은 관리자가 아닙니다".format(message.author.mention))
-
+            
+access_token = os.environ["BOT_TOKEN"]
 client.run('ODU4Njc1MjM2MTM1ODk1MDcz.YNhloQ.1IFq_60bUS4nE42iwEbO7I1PXMI')
