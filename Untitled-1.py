@@ -3,17 +3,17 @@ import discord, asyncio, datetime, pytz
 client = discord.Client()
 
 @client.event
-async def on_ready(): # 봇이 실행되면 한 번 실행됨
-    print("이 문장은 Python의 내장 함수를 출력하는 터미널에서 실행됩니다\n지금 보이는 것 처럼 말이죠")
+async def on_ready():
+    print("bot start")
     await client.change_presence(status=discord.Status.online, activity=discord.Game("주인님께 조련당하는 중"))
 
 @client.event
 async def on_message(message):
-    if message.content == "테스트": # 메세지 감지
+    if message.content == "테스트":
         await message.channel.send ("{} | {}, Hello".format(message.author, message.author.mention))
         await message.author.send ("{} | {}, User, Hello".format(message.author, message.author.mention))
 
-    if message.content == "특정입력":
+    if message.content == "test":
         ch = client.get_channel(859072254959812648)
         await ch.send ("{} | {}, User, Hello".format(ch.author, ch.author.mention))
 
@@ -31,5 +31,5 @@ async def on_message(message):
  
         if i is False:
             await message.channel.send("{}, 당신은 관리자가 아닙니다".format(message.author.mention))
-# 봇을 실행시키기 위한 토큰을 작성해주는 곳
+
 client.run('ODU4Njc1MjM2MTM1ODk1MDcz.YNhloQ.1IFq_60bUS4nE42iwEbO7I1PXMI')
