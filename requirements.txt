@@ -1,4 +1,2 @@
-discord.py==1.7.3
-datetime.py==4.3
-pytz.py==2021.1
-async-timeout.py==3.0.1
+discord.py
+pytz
