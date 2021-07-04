@@ -31,6 +31,7 @@ async def on_message(message):
  
         if i is False:
             await message.channel.send("{}, 당신은 관리자가 아닙니다".format(message.author.mention))
+            
 @client.event
 async def on_connect():
     db = sqlite3.connect('main.db')
